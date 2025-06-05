@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite de Formatura - Medicina</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e8eded; /* Fundo cinza-azulado muito claro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); /* Sombra mais suave e espaçada */
+            padding: 3rem 2.5rem; /* Padding generoso */
+            text-align: center;
+            max-width: 850px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem; /* Espaço maior entre as seções */
+            border: 1px solid #dcdcdc; /* Borda sutil para um toque de elegância */
+        }
+        h1, h2 {
+            font-family: 'Playfair Display', serif; /* Fonte serifada para títulos */
+            color: #1a365d; /* Azul marinho escuro */
+            margin-bottom: 0.5rem;
+        }
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+        }
+        p {
+            color: #4a5568; /* Cinza escuro para texto */
+        }
+        .detail-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem; /* Espaço menor entre label e value */
+            align-items: flex-start; /* Alinha o texto à esquerda nos detalhes */
+        }
+        .detail-label {
+            font-weight: 600;
+            color: #2d3748; /* Cinza mais escuro para rótulos */
+            font-size: 0.95rem;
+        }
+        .detail-value {
+            color: #1a365d; /* Azul marinho para valores importantes */
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+        .highlight-box {
+            background-color: #f7f9fa; /* Fundo mais claro para caixas de destaque */
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05); /* Sombra interna sutil */
+        }
+        .photo-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0; /* Espaçamento para as fotos */
+        }
+        .photo-element {
+            max-width: 400px; /* Tamanho máximo da foto */
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
+            border: 3px solid #a0aec0; /* Borda um pouco mais visível e elegante */
+            object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+            height: auto; /* Mantém a proporção da imagem */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+        }
+        .photo-element:hover {
+            transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+        }
+        .google-maps-link {
+            color: #3182ce; /* Cor azul para links */
+            text-decoration: underline;
+            font-weight: 500;
+        }
+        .google-forms-link {
+            background-color: #4a5568; /* Cor de fundo para o botão do Forms */
+            color: #ffffff; /* Cor do texto do botão */
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none; /* Remove sublinhado padrão de links */
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: inline-block; /* Permite espaçamento e alinhamento */
+            margin-top: 1rem;
+        }
+        .google-forms-link:hover {
+            background-color: #2d3748; /* Cor mais escura ao passar o mouse */
+            transform: translateY(-2px); /* Pequena elevação */
+        }
+
+        @media (min-width: 640px) {
+            .container {
+                padding: 3.5rem 3rem;
+            }
+            .photo-element {
+                max-width: 500px; /* Maior em telas maiores */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Título Principal do Convite -->
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-800 mb-2 leading-tight">
+            Convite para Festa de Formatura
+        </h1>
+        <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
+            É com imensa honra e o coração repleto de gratidão que convido você para celebrar a minha formatura em Medicina.
+        </p>
+
+        <!-- Primeira foto (no começo) -->
+        <div class="photo-container">
+            <img src="https://i.imgur.com/cBZtwoQ.jpeg" alt="Lucas Cavalheri Felipus com touca e máscara" class="photo-element"/>
+        </div>
+
+        <!-- Seção de Dados da Festa de Formatura -->
+        <div class="highlight-box">
+            <h2 class="text-3xl section-title">Detalhes da Celebração</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 text-left">
+                <div class="detail-item">
+                    <span class="detail-label">Data:</span>
+                    <span class="detail-value">Sexta-feira, 13 de Dezembro de 2025</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Hora:</span>
+                    <span class="detail-value">19:00h</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Local:</span>
+                    <span class="detail-value">Sociedade Esportiva e Recreativa BRF</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Endereço:</span>
+                    <span class="detail-value">R. Dez de Setembro - Universitário, Videira - SC, 89560-000</span>
+                </div>
+                <div class="detail-item col-span-1 sm:col-span-2"> <!-- Ocupa duas colunas em telas maiores -->
+                    <span class="detail-value">
+                        <a href="https://maps.app.goo.gl/1K2ogSgdXDz9SSGW6?g_st=com.google.maps.preview.copy" target="_blank" class="google-maps-link">
+                            Ver no Google Maps
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Espaço para Texto Pequeno Personalizado -->
+        <div>
+            <h2 class="text-3xl section-title">Uma Mensagem de Coração</h2>
+            <div class="highlight-box p-8 min-h-[160px] text-left leading-relaxed">
+                <p class="w-full text-center">
+                    "Após anos de estudo, dedicação e inúmeros desafios, a realização deste sonho é um marco em minha vida. Agradeço a Deus, à minha família, amigos e mestres por todo o apoio e inspiração. Convido você, que fez parte desta jornada, para celebrar a concretização de um ideal de vida e o início de uma missão de cuidado e humanidade."
+                </p>
+            </div>
+        </div>
+
+        <!-- Confirmação de Presença (RSVP) -->
+        <div class="highlight-box">
+            <h2 class="text-3xl section-title">Confirmação de Presença (RSVP)</h2>
+            <p class="text-gray-700 mb-4 max-w-lg mx-auto">
+                Para que possamos organizar os detalhes com carinho, por favor, confirme **SUA** presença até uma das datas abaixo:
+            </p>
+            <p class="text-gray-700 font-medium mb-2">
+                • Primeira data de confirmação: **15 de Outubro de 2025**
+            </p>
+            <p class="text-gray-700 font-medium mb-4">
+                • Segunda data de confirmação: **15 de Novembro de 2025**
+            </p>
+            <p class="text-gray-700 font-medium mb-2">
+                Você pode confirmar sua presença através do link abaixo:
+            </p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3GCPoIW1EMWXcdSfboAwXTnxMZlVEWJyfctsl3SKGhMFZnA/viewform?usp=header" target="_blank" class="google-forms-link">
+                Confirmar Presença Aqui
+            </a>
+            <p class="text-gray-700 font-medium mt-4">
+                Ou, se preferir, entre em contato direto: <br>
+                Contato: **Lucas Cavalheri Felipus** <br>
+                Telefone: **(49) 99914-84146** <br>
+                E-mail: **lucasfelipus@gmail.com**
+            </p>
+        </div>
+
+        <!-- Segunda foto (no final) -->
+        <div class="photo-container">
+            <img src="https://i.imgur.com/hmW48ih.jpeg" alt="Lucas Cavalheri Felipus com amigos" class="photo-element"/>
+        </div>
+
+        <!-- Mensagem de Encerramento -->
+        <p class="text-xl text-gray-800 mt-6 font-medium">
+            Sua presença será a maior honra nesta etapa tão significativa.
+        </p>
+        <p class="text-2xl font-bold text-indigo-900 mt-2">
+            Lucas Cavalheri Felipus
+        </p>
+    </div>
+</body>
+</html>
