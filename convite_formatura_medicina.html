@@ -113,7 +113,7 @@
                 border: none;
                 margin: 0 auto;
                 padding: 0.5cm !important; 
-                gap: 0.8rem !important; /* Espaçamento mínimo */
+                gap: 0.5rem !important; /* Espaçamento MÍNIMO na impressão */
             }
             .cover-photo-container {
                 max-width: 250px !important;
@@ -128,7 +128,13 @@
             h3 { font-size: 1rem !important; }
             p, .detail-value { font-size: 0.9rem !important; }
             .detail-label { font-size: 0.8rem !important; }
-            .highlight-box { padding: 1rem !important; }
+            .highlight-box { padding: 0.75rem !important; } /* Reduzindo padding da caixa */
+            
+            /* Ajuste nas colunas para compactar dados */
+            .detail-grid {
+                column-gap: 1.5rem !important; /* Reduz o espaço entre colunas */
+                row-gap: 0.5rem !important; /* Reduz o espaço entre linhas */
+            }
         }
     </style>
 </head>
@@ -161,7 +167,7 @@
         <div class="highlight-box page-break-avoid">
             <h2 class="text-2xl section-title mb-3">Missa em Ação de Graças</h2>
             <p class="text-sm font-medium text-gray-600 mb-3">(Não requer Confirmação de Presença)</p>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-3 text-left">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-x-3 gap-y-3 text-left detail-grid">
                 <div class="detail-item">
                     <span class="detail-label">Dia:</span>
                     <span class="detail-value">Quinta-feira, 11 de Dezembro de 2025</span>
@@ -186,7 +192,7 @@
             <!-- Seção: Jantar e Baile de Formatura -->
             <div class="highlight-box page-break-avoid">
                 <h2 class="text-2xl section-title mb-3">Jantar e Baile de Formatura</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-left">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-4 text-left detail-grid">
                     <div class="detail-item">
                         <span class="detail-label">Data:</span>
                         <span class="detail-value">Sábado, 13 de Dezembro de 2025</span>
