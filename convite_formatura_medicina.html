@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convite de Formatura - Medicina</title>
+    <title>Convite de Formatura - Lucas Felipus</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -104,7 +104,21 @@
             background-color: #2d3748; /* Cor mais escura ao passar o mouse */
             transform: translateY(-2px); /* Pequena elevação */
         }
-
+        /* REGRAS DE IMPRESSÃO PARA CORRIGIR QUEBRAS DE PÁGINA */
+        @media print {
+            .page-break-avoid {
+                page-break-inside: avoid !important; /* Força o navegador a não cortar o bloco */
+                display: block !important;
+            }
+            body {
+                min-height: initial !important; /* Desabilita min-height para impressão */
+                padding: 0.5rem !important; /* Diminui o padding da página */
+            }
+            .container {
+                box-shadow: none; /* Remove sombra na impressão */
+                border: none; /* Remove borda na impressão */
+            }
+        }
         @media (min-width: 640px) {
             .container {
                 padding: 3.5rem 3rem;
@@ -125,18 +139,14 @@
             É com imensa honra e o coração repleto de gratidão que convido você para celebrar a minha formatura em Medicina.
         </p>
 
-        <!-- Primeira foto (no começo) -->
-        <div class="photo-container">
-            <img src="https://i.imgur.com/cBZtwoQ.jpeg" alt="Lucas Cavalheri Felipus com touca e máscara" class="photo-element"/>
-        </div>
-
-        <!-- Seção de Dados da Festa de Formatura -->
-        <div class="highlight-box">
-            <h2 class="text-3xl section-title">Detalhes da Celebração</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 text-left">
+        <!-- Seção: Missa em Ação de Graças (AVISO) - page-break-avoid para manter o bloco inteiro -->
+        <div class="highlight-box page-break-avoid">
+            <h2 class="text-3xl section-title mb-2">Missa em Ação de Graças</h2>
+            <p class="text-sm font-medium text-gray-600 mb-4">(Não requer Confirmação de Presença)</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-4 text-left">
                 <div class="detail-item">
-                    <span class="detail-label">Data:</span>
-                    <span class="detail-value">Sexta-feira, 13 de Dezembro de 2025</span>
+                    <span class="detail-label">Dia:</span>
+                    <span class="detail-value">Quinta-feira, 11 de Dezembro de 2025</span>
                 </div>
                 <div class="detail-item">
                     <span class="detail-label">Hora:</span>
@@ -144,16 +154,44 @@
                 </div>
                 <div class="detail-item">
                     <span class="detail-label">Local:</span>
-                    <span class="detail-value">Sociedade Esportiva e Recreativa BRF</span>
+                    <span class="detail-value">Paróquia Santo Antônio em Lebon Régis</span>
+                </div>
+                <div class="detail-item col-span-1 sm:col-span-3">
+                    <span class="detail-label">Endereço:</span>
+                    <span class="detail-value">Av. Santo Antônio, Centro, Lebon Régis - SC</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Primeira foto (no começo) -->
+        <div class="photo-container page-break-avoid">
+            <img src="https://i.imgur.com/cBZtwoQ.jpeg" alt="Lucas Cavalheri Felipus com touca e máscara" class="photo-element"/>
+        </div>
+
+        <!-- Seção: Jantar e Baile de Formatura - page-break-avoid para manter o bloco inteiro -->
+        <div class="highlight-box page-break-avoid">
+            <h2 class="text-3xl section-title">Jantar e Baile de Formatura</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 text-left">
+                <div class="detail-item">
+                    <span class="detail-label">Data:</span>
+                    <span class="detail-value">Sábado, 13 de Dezembro de 2025</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Hora:</span>
+                    <span class="detail-value">18:30h</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Local:</span>
+                    <span class="detail-value">Restaurante Esplendor (Dentro da SERP da BRF)</span>
                 </div>
                 <div class="detail-item">
                     <span class="detail-label">Endereço:</span>
                     <span class="detail-value">R. Dez de Setembro - Universitário, Videira - SC, 89560-000</span>
                 </div>
-                <div class="detail-item col-span-1 sm:col-span-2"> <!-- Ocupa duas colunas em telas maiores -->
+                <div class="detail-item col-span-1 sm:col-span-2">
                     <span class="detail-value">
                         <a href="https://maps.app.goo.gl/1K2ogSgdXDz9SSGW6?g_st=com.google.maps.preview.copy" target="_blank" class="google-maps-link">
-                            Ver no Google Maps
+                            Ver Localização no Google Maps
                         </a>
                     </span>
                 </div>
@@ -161,7 +199,7 @@
         </div>
 
         <!-- Espaço para Texto Pequeno Personalizado -->
-        <div>
+        <div class="page-break-avoid">
             <h2 class="text-3xl section-title">Uma Mensagem de Coração</h2>
             <div class="highlight-box p-8 min-h-[160px] text-left leading-relaxed">
                 <p class="w-full text-center">
@@ -170,8 +208,8 @@
             </div>
         </div>
 
-        <!-- Confirmação de Presença (RSVP) -->
-        <div class="highlight-box">
+        <!-- Confirmação de Presença (RSVP) - page-break-avoid para manter o bloco inteiro -->
+        <div class="highlight-box page-break-avoid">
             <h2 class="text-3xl section-title">Confirmação de Presença (RSVP)</h2>
             <p class="text-gray-700 mb-4 max-w-lg mx-auto">
                 Para que possamos organizar os detalhes com carinho, por favor, confirme **SUA** presença até uma das datas abaixo:
@@ -191,23 +229,25 @@
             <p class="text-gray-700 font-medium mt-4">
                 Ou, se preferir, entre em contato direto: <br>
                 Contato: **Lucas Cavalheri Felipus** <br>
-                Telefone: **(49) 99914-84146** <br>
+                Telefone: **(49) 99148-4146** <br>
                 E-mail: **lucasfelipus@gmail.com**
             </p>
         </div>
 
         <!-- Segunda foto (no final) -->
-        <div class="photo-container">
+        <div class="photo-container page-break-avoid">
             <img src="https://i.imgur.com/hmW48ih.jpeg" alt="Lucas Cavalheri Felipus com amigos" class="photo-element"/>
         </div>
 
         <!-- Mensagem de Encerramento -->
-        <p class="text-xl text-gray-800 mt-6 font-medium">
-            Sua presença será a maior honra nesta etapa tão significativa.
-        </p>
-        <p class="text-2xl font-bold text-indigo-900 mt-2">
-            Lucas Cavalheri Felipus
-        </p>
+        <div class="page-break-avoid">
+            <p class="text-xl text-gray-800 mt-6 font-medium">
+                Sua presença será a maior honra nesta etapa tão significativa.
+            </p>
+            <p class="text-2xl font-bold text-indigo-900 mt-2">
+                Lucas Cavalheri Felipus
+            </p>
+        </div>
     </div>
 </body>
 </html>
