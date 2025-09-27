@@ -77,6 +77,10 @@
                 page-break-after: avoid !important;
                 page-break-before: avoid !important;
             }
+            /* Regra específica para o bloco de mensagem */
+            .message-block {
+                page-break-inside: avoid !important;
+            }
             body {
                 min-height: initial !important;
                 background-color: #ffffff !important;
@@ -180,7 +184,7 @@
         </div>
 
         <!-- Espaço para Texto Pequeno Personalizado -->
-        <div class="page-break-avoid">
+        <div class="message-block page-break-avoid">
             <h2 class="text-2xl section-title">Uma Mensagem de Coração</h2>
             <div class="highlight-box p-4 min-h-[120px] text-left leading-relaxed">
                 <p class="w-full text-center text-sm">
