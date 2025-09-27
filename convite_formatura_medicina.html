@@ -3,273 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convite de Formatura - Lucas Felipus</title>
+    <title>Convite de Formatura - Medicina</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Estilos de Visualização Web (Apenas para o navegador) */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #e8eded;
+            background-color: #e8eded; /* Fundo cinza-azulado muito claro */
             display: flex;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             min-height: 100vh;
             margin: 0;
-            padding: 2.5rem;
+            padding: 2rem;
             box-sizing: border-box;
         }
         .container {
             background-color: #ffffff;
             border-radius: 1.5rem;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-            padding: 3rem; 
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); /* Sombra mais suave e espaçada */
+            padding: 3rem 2.5rem; /* Padding generoso */
             text-align: center;
             max-width: 850px;
             width: 100%;
             display: flex;
             flex-direction: column;
-            gap: 1.5rem; 
-            border: 1px solid #dcdcdc;
+            gap: 2.5rem; /* Espaço maior entre as seções */
+            border: 1px solid #dcdcdc; /* Borda sutil para um toque de elegância */
         }
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            color: #1a365d;
-            margin: 0;
-            line-height: 1.2;
+        h1, h2 {
+            font-family: 'Playfair Display', serif; /* Fonte serifada para títulos */
+            color: #1a365d; /* Azul marinho escuro */
+            margin-bottom: 0.5rem;
         }
-        h1 { font-size: 2.8rem; font-weight: 700; }
-        h2 { font-size: 2rem; font-weight: 700; }
-        h3 { font-size: 1.2rem; font-weight: 600; }
-        p { color: #4a5568; font-size: 1rem; }
-        
         .section-title {
-            margin-bottom: 0.75rem;
-            margin-top: 0.5rem;
-        }
-
-        .highlight-box {
-            background-color: #f7f9fa;
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-            box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.04);
-        }
-        
-        /* Foto de Capa */
-        .cover-photo-container {
-            margin: 0 auto 1.5rem auto;
-            max-width: 300px;
-        }
-        .cover-photo {
-            width: 100%;
-            height: 350px; 
-            object-fit: cover;
-            object-position: center top; 
-            border-radius: 0.75rem;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            border: 2px solid #1a365d;
-        }
-
-        /* Detalhes de Data/Hora/Local */
-        .detail-item { align-items: flex-start; }
-        .detail-label { font-weight: 700; font-size: 0.95rem; color: #1a365d; }
-        .detail-value { color: #4a5568; font-weight: 500; font-size: 1.05rem; }
-        
-        /* RSVP Link */
-        .rsvp-link {
-            transition: all 0.3s;
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 0.75rem 1.5rem;
-            background-color: #1a365d;
-            color: white;
-            border-radius: 9999px;
             font-weight: 700;
-            text-decoration: none;
-            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.4);
+            margin-bottom: 1.25rem;
         }
-        .rsvp-link:hover { background-color: #2c5282; }
-
-        /* REGRAS DE IMPRESSÃO (Otimização Final) */
+        p {
+            color: #4a5568; /* Cinza escuro para texto */
+        }
+        .detail-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem; /* Espaço menor entre label e value */
+            align-items: flex-start; /* Alinha o texto à esquerda nos detalhes */
+        }
+        .detail-label {
+            font-weight: 600;
+            color: #2d3748; /* Cinza mais escuro para rótulos */
+            font-size: 0.95rem;
+        }
+        .detail-value {
+            color: #1a365d; /* Azul marinho para valores importantes */
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+        .highlight-box {
+            background-color: #f7f9fa; /* Fundo mais claro para caixas de destaque */
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05); /* Sombra interna sutil */
+        }
+        .photo-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0; /* Espaçamento para as fotos */
+        }
+        .photo-element {
+            max-width: 400px; /* Tamanho máximo da foto */
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
+            border: 3px solid #a0aec0; /* Borda um pouco mais visível e elegante */
+            object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+            height: auto; /* Mantém a proporção da imagem */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+        }
+        .photo-element:hover {
+            transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+        }
+        .google-maps-link {
+            color: #3182ce; /* Cor azul para links */
+            text-decoration: underline;
+            font-weight: 500;
+        }
+        .google-forms-link {
+            background-color: #4a5568; /* Cor de fundo para o botão do Forms */
+            color: #ffffff; /* Cor do texto do botão */
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none; /* Remove sublinhado padrão de links */
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: inline-block; /* Permite espaçamento e alinhamento */
+            margin-top: 1rem;
+        }
+        .google-forms-link:hover {
+            background-color: #2d3748; /* Cor mais escura ao passar o mouse */
+            transform: translateY(-2px); /* Pequena elevação */
+        }
+        
+        /* CORREÇÃO PARA PDF: Evita quebra de página dentro de blocos importantes */
         @media print {
-            .page-break-avoid {
+            .no-page-break {
+                /* Força que o conteúdo não seja cortado */
                 page-break-inside: avoid !important;
-                page-break-after: avoid !important;
-                page-break-before: avoid !important;
+                /* Adiciona uma pequena margem para garantir a separação */
+                margin-top: 10px; 
             }
-            .final-block {
-                /* Grupo que evita quebra no final */
-                page-break-inside: avoid !important;
-            }
+        }
 
-            body {
-                min-height: initial !important;
-                background-color: #ffffff !important;
-                padding: 0 !important;
-                display: block; 
-            }
+        @media (min-width: 640px) {
             .container {
-                box-shadow: none;
-                border: none;
-                margin: 0 auto;
-                padding: 0.5cm !important; 
-                gap: 0.5rem !important; /* Espaçamento MÍNIMO na impressão */
+                padding: 3.5rem 3rem;
             }
-            .cover-photo-container {
-                max-width: 250px !important;
-                margin: 0.5rem auto 1rem auto !important;
-            }
-            .cover-photo {
-                height: 300px !important;
-            }
-
-            h1 { font-size: 2.2rem !important; }
-            h2 { font-size: 1.5rem !important; }
-            h3 { font-size: 1rem !important; }
-            p, .detail-value { font-size: 0.9rem !important; }
-            .detail-label { font-size: 0.8rem !important; }
-            .highlight-box { padding: 0.75rem !important; } /* Reduzindo padding da caixa */
-            
-            /* Ajuste nas colunas para compactar dados */
-            .detail-grid {
-                column-gap: 1.5rem !important; /* Reduz o espaço entre colunas */
-                row-gap: 0.5rem !important; /* Reduz o espaço entre linhas */
+            .photo-element {
+                max-width: 500px; /* Maior em telas maiores */
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        
-        <!-- NOVO TÍTULO DE FORMATURA -->
-        <h1 class="text-4xl sm:text-5xl font-bold text-gray-800 leading-tight page-break-avoid mb-4">
-            Convite de Formatura
+        <!-- Título Principal do Convite -->
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-800 mb-2 leading-tight">
+            Convite para Festa de Formatura
         </h1>
-
-        <!-- Foto de Capa (Formal) -->
-        <div class="cover-photo-container page-break-avoid">
-            <!-- USANDO CAMINHO RELATIVO PARA O GITHUB PAGES -->
-            <img src="IMG_20230723_220453_818.jpg" 
-                 alt="Lucas Cavalheri Felipus - Formatura" 
-                 class="cover-photo"
-            />
-        </div>
-
-        <!-- Título Secundário (Nome) e Mensagem Principal -->
-        <h2 class="final-name leading-none page-break-avoid">
-            Lucas Cavalheri Felipus
-        </h2>
-        <p class="text-xl text-gray-700 mb-4 max-w-2xl mx-auto page-break-avoid font-medium">
+        <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
             É com imensa honra e o coração repleto de gratidão que convido você para celebrar a minha formatura em Medicina.
         </p>
-
-        <!-- Seção: Missa em Ação de Graças -->
-        <div class="highlight-box page-break-avoid">
-            <h2 class="text-2xl section-title mb-3">Missa em Ação de Graças</h2>
-            <p class="text-sm font-medium text-gray-600 mb-3">(Não requer Confirmação de Presença)</p>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-x-3 gap-y-3 text-left detail-grid">
+        
+        <!-- BLOCO: Missa em Ação de Graças (Aviso) -->
+        <div class="highlight-box bg-gray-100 border border-gray-300 p-6 no-page-break"> <!-- CLASSE RESTAURADA -->
+            <h2 class="text-2xl section-title" style="color: #2d3748;">
+                Missa em Ação de Graças
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-left mx-auto max-w-lg">
+                <div class="detail-item md:col-span-2">
+                    <span class="detail-label">Evento:</span>
+                    <span class="detail-value text-gray-800">Missa de Formatura em Medicina</span>
+                </div>
                 <div class="detail-item">
-                    <span class="detail-label">Dia:</span>
-                    <span class="detail-value">Quinta-feira, 11 de Dezembro de 2025</span>
+                    <span class="detail-label">Data:</span>
+                    <span class="detail-value text-gray-800">Quinta-feira, 11 de Dezembro de 2025</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Horário:</span>
+                    <span class="detail-value text-gray-800">19:00h</span>
+                </div>
+                <div class="detail-item md:col-span-2">
+                    <span class="detail-label">Local:</span>
+                    <span class="detail-value text-gray-800">Paróquia Santo Antônio (Av. Santo Antônio, Centro, Lebon Régis)</span>
+                </div>
+            </div>
+            <p class="text-sm text-gray-500 italic mt-4">
+                Sua presença será uma bênção neste momento de fé e gratidão.
+            </p>
+        </div>
+        <!-- FIM DO BLOCO -->
+
+        <!-- Primeira foto (no começo) -->
+        <div class="photo-container no-page-break">
+            <img src="https://i.imgur.com/cBZtwoQ.jpeg" alt="Lucas Cavalheri Felipus com touca e máscara" class="photo-element"/>
+        </div>
+
+        <!-- Seção de Dados da Festa de Formatura -->
+        <div class="highlight-box no-page-break">
+            <h2 class="text-3xl section-title">Jantar e Baile de Formatura</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 text-left">
+                <div class="detail-item">
+                    <span class="detail-label">Data:</span>
+                    <span class="detail-value">Sábado, 13 de Dezembro de 2025</span> 
                 </div>
                 <div class="detail-item">
                     <span class="detail-label">Hora:</span>
-                    <span class="detail-value">19:00h</span>
+                    <span class="detail-value">18:30h</span> 
                 </div>
                 <div class="detail-item">
                     <span class="detail-label">Local:</span>
-                    <span class="detail-value">Paróquia Santo Antônio em Lebon Régis</span>
+                    <span class="detail-value">Restaurante Explendor (Dentro da SERP da BRF)</span> 
                 </div>
-                <div class="detail-item col-span-1 sm:col-span-3">
+                <div class="detail-item">
                     <span class="detail-label">Endereço:</span>
-                    <span class="detail-value">Av. Santo Antônio, Centro, Lebon Régis - SC</span>
+                    <span class="detail-value">R. Dez de Setembro - Universitário, Videira - SC, 89560-000</span>
+                </div>
+                <div class="detail-item col-span-1 sm:col-span-2"> <!-- Ocupa duas colunas em telas maiores -->
+                    <span class="detail-value">
+                        <a href="https://maps.app.goo.gl/1K2ogSgdXDz9SSGW6?g_st=com.google.maps.preview.copy" target="_blank" class="google-maps-link">
+                            Ver no Google Maps
+                        </a>
+                    </span>
                 </div>
             </div>
         </div>
-        
-        <!-- BLOCÃO FINAL (JANTAR/BAILE, MENSAGEM, RSVP, FOTO DE ENCERRAMENTO) -->
-        <div class="final-block">
-            <!-- Seção: Jantar e Baile de Formatura -->
-            <div class="highlight-box page-break-avoid">
-                <h2 class="text-2xl section-title mb-3">Jantar e Baile de Formatura</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-4 text-left detail-grid">
-                    <div class="detail-item">
-                        <span class="detail-label">Data:</span>
-                        <span class="detail-value">Sábado, 13 de Dezembro de 2025</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Hora:</span>
-                        <span class="detail-value">18:30h</span>
-                    </div>
-                    <div class="detail-item col-span-1 sm:col-span-2">
-                        <span class="detail-label">Local:</span>
-                        <span class="detail-value">Restaurante Esplendor (Dentro da SERP da BRF)</span>
-                    </div>
-                    <div class="detail-item col-span-1 sm:col-span-2">
-                        <span class="detail-label">Endereço:</span>
-                        <span class="detail-value">R. Dez de Setembro - Universitário, Videira - SC, 89560-000</span>
-                    </div>
-                    <div class="detail-item col-span-1 sm:col-span-2 mt-2">
-                        <span class="detail-value">
-                            <a href="https://maps.app.goo.gl/1K2ogSgdXDz9SSGW6?g_st=com.google.maps.preview.copy" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold transition duration-200">
-                                Ver Localização no Google Maps
-                            </a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Espaço para Mensagem Pessoal -->
-            <div class="message-block page-break-avoid mt-4">
-                <h2 class="text-2xl section-title mb-3">Uma Mensagem de Coração</h2>
-                <div class="highlight-box p-5 min-h-[120px] text-left leading-relaxed">
-                    <p class="w-full text-center text-base">
-                        "Após anos de estudo, dedicação e inúmeros desafios, a realização deste sonho é um marco em minha vida. Agradeço a Deus, à minha família, amigos e mestres por todo o apoio e inspiração. Convido você, que fez parte desta jornada, para celebrar a concretização de um ideal de vida e o início de uma missão de cuidado e humanidade."
-                    </p>
-                </div>
-            </div>
 
-            <!-- Confirmação de Presença (RSVP) -->
-            <div class="highlight-box page-break-avoid mt-4">
-                <h3 class="section-title mb-3 text-2xl font-bold">Confirmação de Presença (RSVP)</h3>
-                <p class="text-gray-700 mb-3 max-w-lg mx-auto text-base">
-                    Para que possamos organizar os detalhes com carinho, por favor, confirme **SUA** presença:
-                </p>
-                <p class="text-gray-700 font-bold mb-3 text-base">
-                    Prazo Final: **15 de Novembro de 2025**
-                </p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3GCPoIW1EMWXcdSfboAwXTnxMZlVEWJyfctsl3SKGhMFZnA/viewform?usp=header" target="_blank" class="rsvp-link">
-                    CONFIRMAR PRESENÇA AQUI
-                </a>
-                <p class="text-gray-700 font-medium mt-3 text-sm">
-                    Ou, se preferir, entre em contato direto: Lucas Cavalheri Felipus (49) 99148-4146
-                </p>
-            </div>
-
-            <!-- Foto de Encerramento (Grupo) e Citação -->
-            <div class="page-break-avoid mt-5">
-                <div class="cover-photo-container">
-                    <img src="https://i.imgur.com/hmW48ih.jpeg" 
-                        alt="Lucas Cavalheri Felipus com amigos" 
-                        class="cover-photo"
-                    />
-                </div>
-                
-                <p class="italic text-sm max-w-md mx-auto text-gray-600 mt-5">
-                    “Para que todos vejam, saibam, considerem e juntamente entendam que a mão do Senhor fez isso.”
-                </p>
-                <p class="font-bold text-sm mt-1 mb-3">
-                    ISAÍAS 41:20
-                </p>
-                
-                <h1 class="final-name">
-                    Lucas Cavalheri Felipus
-                </h1>
-                <p class="font-medium text-lg text-gray-700 mt-1">
-                    Será uma honra ter você presente!
+        <!-- Espaço para Texto Pequeno Personalizado -->
+        <div class="no-page-break">
+            <h2 class="text-3xl section-title">Uma Mensagem de Coração</h2>
+            <div class="highlight-box p-8 min-h-[160px] text-left leading-relaxed">
+                <p class="w-full text-center">
+                    "Após anos de estudo, dedicação e inúmeros desafios, a realização deste sonho é um marco em minha vida. Agradeço a Deus, à minha família, amigos e mestres por todo o apoio e inspiração. Convido você, que fez parte desta jornada, para celebrar a concretização de um ideal de vida e o início de uma missão de cuidado e humanidade."
                 </p>
             </div>
         </div>
+
+        <!-- Confirmação de Presença (RSVP) -->
+        <div class="highlight-box no-page-break">
+            <h2 class="text-3xl section-title">Confirmação de Presença (RSVP)</h2>
+            <p class="text-gray-700 mb-4 max-w-lg mx-auto">
+                Para que possamos organizar os detalhes com carinho, por favor, confirme **SUA** presença até uma das datas abaixo:
+            </p>
+            <p class="text-gray-700 font-medium mb-2">
+                • Primeira data de confirmação: **15 de Outubro de 2025**
+            </p>
+            <p class="text-gray-700 font-medium mb-4">
+                • Segunda data de confirmação: **15 de Novembro de 2025**
+            </p>
+            <p class="text-gray-700 font-medium mb-2">
+                Você pode confirmar sua presença através do link abaixo:
+            </p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3GCPoIW1EMWXcdSfboAwXTnxMZlVEWJyfctsl3SKGhMFZnA/viewform?usp=header" target="_blank" class="google-forms-link">
+                Confirmar Presença Aqui
+            </a>
+            <p class="text-gray-700 font-medium mt-4">
+                Ou, se preferir, entre em contato direto: <br>
+                Contato: **Lucas Cavalheri Felipus** <br>
+                Telefone: **(49) 99148-4146** <br> 
+                E-mail: **lucasfelipus@gmail.com**
+            </p>
+        </div>
+
+        <!-- Segunda foto (no final) -->
+        <div class="photo-container no-page-break">
+            <img src="https://i.imgur.com/hmW48ih.jpeg" alt="Lucas Cavalheri Felipus com amigos" class="photo-element"/>
+        </div>
+
+        <!-- Mensagem de Encerramento -->
+        <p class="text-xl text-gray-800 mt-6 font-medium no-page-break">
+            Sua presença será a maior honra nesta etapa tão significativa.
+        </p>
+        <p class="text-2xl font-bold text-indigo-900 mt-2 no-page-break">
+            Lucas Cavalheri Felipus
+        </p>
     </div>
 </body>
 </html>
