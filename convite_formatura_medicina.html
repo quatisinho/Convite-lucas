@@ -77,11 +77,8 @@
                 page-break-after: avoid !important;
                 page-break-before: avoid !important;
             }
-            /* Regra AGRESSIVA para unir Mensagem e RSVP */
-            .message-rsvp-group {
-                page-break-inside: avoid !important;
-            }
-            .message-block h2, .message-block .highlight-box {
+            /* Regra AGRESSIVA para unir o bloco final */
+            .final-block {
                 page-break-inside: avoid !important;
             }
 
@@ -156,41 +153,41 @@
         <div class="photo-container page-break-avoid">
             <img src="https://i.imgur.com/cBZtwoQ.jpeg" alt="Lucas Cavalheri Felipus com touca e máscara" class="photo-element"/>
         </div>
-
-        <!-- Seção: Jantar e Baile de Formatura -->
-        <div class="highlight-box page-break-avoid">
-            <h2 class="text-2xl section-title">Jantar e Baile de Formatura</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-left">
-                <div class="detail-item">
-                    <span class="detail-label">Data:</span>
-                    <span class="detail-value">Sábado, 13 de Dezembro de 2025</span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Hora:</span>
-                    <span class="detail-value">18:30h</span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Local:</span>
-                    <span class="detail-value">Restaurante Esplendor (Dentro da SERP da BRF)</span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Endereço:</span>
-                    <span class="detail-value">R. Dez de Setembro - Universitário, Videira - SC, 89560-000</span>
-                </div>
-                <div class="detail-item col-span-1 sm:col-span-2">
-                    <span class="detail-value">
-                        <a href="https://maps.app.goo.gl/1K2ogSgdXDz9SSGW6?g_st=com.google.maps.preview.copy" target="_blank" class="google-maps-link">
-                            Ver Localização no Google Maps
-                        </a>
-                    </span>
+        
+        <!-- BLOCÃO FINAL (JANTAR/BAILE, MENSAGEM, RSVP, FOTOS FINAIS) -->
+        <div class="final-block">
+            <!-- Seção: Jantar e Baile de Formatura -->
+            <div class="highlight-box page-break-avoid">
+                <h2 class="text-2xl section-title">Jantar e Baile de Formatura</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-left">
+                    <div class="detail-item">
+                        <span class="detail-label">Data:</span>
+                        <span class="detail-value">Sábado, 13 de Dezembro de 2025</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Hora:</span>
+                        <span class="detail-value">18:30h</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Local:</span>
+                        <span class="detail-value">Restaurante Esplendor (Dentro da SERP da BRF)</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Endereço:</span>
+                        <span class="detail-value">R. Dez de Setembro - Universitário, Videira - SC, 89560-000</span>
+                    </div>
+                    <div class="detail-item col-span-1 sm:col-span-2">
+                        <span class="detail-value">
+                            <a href="https://maps.app.goo.gl/1K2ogSgdXDz9SSGW6?g_st=com.google.maps.preview.copy" target="_blank" class="google-maps-link">
+                                Ver Localização no Google Maps
+                            </a>
+                        </span>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- BLOCÃO (Mensagem, RSVP, Fotos Finais) -->
-        <div class="message-rsvp-group page-break-avoid">
+            
             <!-- Espaço para Texto Pequeno Personalizado -->
-            <div class="message-block page-break-avoid">
+            <div class="message-block page-break-avoid mt-4">
                 <h2 class="text-2xl section-title">Uma Mensagem de Coração</h2>
                 <div class="highlight-box p-4 min-h-[120px] text-left leading-relaxed">
                     <p class="w-full text-center text-sm">
