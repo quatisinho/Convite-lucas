@@ -77,10 +77,14 @@
                 page-break-after: avoid !important;
                 page-break-before: avoid !important;
             }
-            /* Regra específica para o bloco de mensagem */
-            .message-block {
+            /* Regra AGRESSIVA para unir Mensagem e RSVP */
+            .message-rsvp-group {
                 page-break-inside: avoid !important;
             }
+            .message-block h2, .message-block .highlight-box {
+                page-break-inside: avoid !important;
+            }
+
             body {
                 min-height: initial !important;
                 background-color: #ffffff !important;
@@ -182,53 +186,56 @@
                 </div>
             </div>
         </div>
+        
+        <!-- BLOCÃO (Mensagem, RSVP, Fotos Finais) -->
+        <div class="message-rsvp-group page-break-avoid">
+            <!-- Espaço para Texto Pequeno Personalizado -->
+            <div class="message-block page-break-avoid">
+                <h2 class="text-2xl section-title">Uma Mensagem de Coração</h2>
+                <div class="highlight-box p-4 min-h-[120px] text-left leading-relaxed">
+                    <p class="w-full text-center text-sm">
+                        "Após anos de estudo, dedicação e inúmeros desafios, a realização deste sonho é um marco em minha vida. Agradeço a Deus, à minha família, amigos e mestres por todo o apoio e inspiração. Convido você, que fez parte desta jornada, para celebrar a concretização de um ideal de vida e o início de uma missão de cuidado e humanidade."
+                    </p>
+                </div>
+            </div>
 
-        <!-- Espaço para Texto Pequeno Personalizado -->
-        <div class="message-block page-break-avoid">
-            <h2 class="text-2xl section-title">Uma Mensagem de Coração</h2>
-            <div class="highlight-box p-4 min-h-[120px] text-left leading-relaxed">
-                <p class="w-full text-center text-sm">
-                    "Após anos de estudo, dedicação e inúmeros desafios, a realização deste sonho é um marco em minha vida. Agradeço a Deus, à minha família, amigos e mestres por todo o apoio e inspiração. Convido você, que fez parte desta jornada, para celebrar a concretização de um ideal de vida e o início de uma missão de cuidado e humanidade."
+            <!-- Confirmação de Presença (RSVP) -->
+            <div class="highlight-box page-break-avoid mt-4">
+                <h2 class="text-2xl section-title">Confirmação de Presença (RSVP)</h2>
+                <p class="text-gray-700 mb-2 max-w-lg mx-auto text-sm">
+                    Para que possamos organizar os detalhes com carinho, por favor, confirme **SUA** presença até uma das datas abaixo:
+                </p>
+                <p class="text-gray-700 font-medium mb-1 text-sm">
+                    • Primeira data de confirmação: **15 de Outubro de 2025**
+                </p>
+                <p class="text-gray-700 font-medium mb-3 text-sm">
+                    • Segunda data de confirmação: **15 de Novembro de 2025**
+                </p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3GCPoIW1EMWXcdSfboAwXTnxMZlVEWJyfctsl3SKGhMFZnA/viewform?usp=header" target="_blank" class="google-forms-link">
+                    Confirmar Presença Aqui
+                </a>
+                <p class="text-gray-700 font-medium mt-3 text-sm">
+                    Ou, se preferir, entre em contato direto: <br>
+                    Contato: **Lucas Cavalheri Felipus** <br>
+                    Telefone: **(49) 99148-4146** <br>
+                    E-mail: **lucasfelipus@gmail.com**
                 </p>
             </div>
-        </div>
 
-        <!-- Confirmação de Presença (RSVP) -->
-        <div class="highlight-box page-break-avoid">
-            <h2 class="text-2xl section-title">Confirmação de Presença (RSVP)</h2>
-            <p class="text-gray-700 mb-2 max-w-lg mx-auto text-sm">
-                Para que possamos organizar os detalhes com carinho, por favor, confirme **SUA** presença até uma das datas abaixo:
-            </p>
-            <p class="text-gray-700 font-medium mb-1 text-sm">
-                • Primeira data de confirmação: **15 de Outubro de 2025**
-            </p>
-            <p class="text-gray-700 font-medium mb-3 text-sm">
-                • Segunda data de confirmação: **15 de Novembro de 2025**
-            </p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3GCPoIW1EMWXcdSfboAwXTnxMZlVEWJyfctsl3SKGhMFZnA/viewform?usp=header" target="_blank" class="google-forms-link">
-                Confirmar Presença Aqui
-            </a>
-            <p class="text-gray-700 font-medium mt-3 text-sm">
-                Ou, se preferir, entre em contato direto: <br>
-                Contato: **Lucas Cavalheri Felipus** <br>
-                Telefone: **(49) 99148-4146** <br>
-                E-mail: **lucasfelipus@gmail.com**
-            </p>
-        </div>
+            <!-- Segunda foto (no final) -->
+            <div class="photo-container page-break-avoid">
+                <img src="https://i.imgur.com/hmW48ih.jpeg" alt="Lucas Cavalheri Felipus com amigos" class="photo-element"/>
+            </div>
 
-        <!-- Segunda foto (no final) -->
-        <div class="photo-container page-break-avoid">
-            <img src="https://i.imgur.com/hmW48ih.jpeg" alt="Lucas Cavalheri Felipus com amigos" class="photo-element"/>
-        </div>
-
-        <!-- Mensagem de Encerramento -->
-        <div class="page-break-avoid">
-            <p class="final-message">
-                Sua presença será a maior honra nesta etapa tão significativa.
-            </p>
-            <p class="final-name">
-                Lucas Cavalheri Felipus
-            </p>
+            <!-- Mensagem de Encerramento -->
+            <div class="page-break-avoid">
+                <p class="final-message">
+                    Sua presença será a maior honra nesta etapa tão significativa.
+                </p>
+                <p class="final-name">
+                    Lucas Cavalheri Felipus
+                </p>
+            </div>
         </div>
     </div>
 </body>
